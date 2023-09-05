@@ -34,31 +34,20 @@ const NavBar = () => {
                         href="/home"
                         sx={{
                             mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
+                            display: 'flex',
                             fontWeight: 600,
                             letterSpacing: '.15rem',
-                            color: 'inherit',
+                            color: '#48cae4',
                             textDecoration: 'none',
                         }}
                     >
                         CampusFinders
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        <Menu
-                            id="menu-appbar"
-                            sx={{
-                                display: { xs: 'block', md: 'none' },
-                            }}
-                        >
-                            {pages.map((page) => (
-                                <MenuItem key={page}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box
+                        style={{
+                            marginRight: '15px'
+                        }}
+                        sx={{ flexGrow: 1, display: 'flex', flexDirection: 'row-reverse' }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
@@ -68,7 +57,6 @@ const NavBar = () => {
                             </Button>
                         ))}
                     </Box>
-
                     <Box sx={{ flexGrow: 0 }}>
                         <IconButton sx={{ p: 0 }}>
                             <Avatar src="" />

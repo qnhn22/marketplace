@@ -9,8 +9,8 @@ const router = express.Router();
 router.post("/posts", verifyToken, upload.single("picture"), createPost);
 
 // get
-router.get("/posts", verifyToken, getAllPosts);
-router.get("/posts/:user_id", verifyToken, getUserPosts);
+router.get("/", verifyToken, getAllPosts);
+router.get("/:user_id/posts", verifyToken, getUserPosts);
 
 // update
 

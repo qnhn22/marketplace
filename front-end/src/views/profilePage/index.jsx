@@ -1,8 +1,12 @@
 import React from "react";
+import NavBar from "../navbar";
 
 const ProfilePage = () => {
     return (
-        <h3>ProfilePage</h3>
+        <>
+            <NavBar />
+            <h3>ProfilePage</h3>
+        </>
     )
 }
 
